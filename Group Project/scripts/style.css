@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
