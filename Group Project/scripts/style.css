@@ -1,26 +1,80 @@
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    margin: 0;
+    background-color: #F4F7FA;
+    color: #1E252B;
 }
 
 header {
     display: flex;
     flex-direction: column;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(to right, #002244, #0072CE);
+    color: #F4F7FA;
+}
+
+header h1, header p {
+    margin-left: 7rem;
+}
+
+header p {
+    margin-top: -1rem;
+}
+
+nav {
+    background-color: #252D35;
+    border-top: .5rem double #FFB81C;
+    border-bottom: .25rem solid #FFB81C;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: left;
+    align-items: stretch;
+    list-style: none;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
 }
+
+nav li {
+    display: flex; 
+}
+
+nav li a {
+    color: #F4F7FA;
+    text-decoration: none;
+    font-weight: bolder;
+    height: 100%;
+    min-width: 5rem;
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav li a:hover, nav li a.active {
+    background-color: #FFB81C;
+    color: #252D35;
+}
+
 
 main {
     display: flex;
     flex-direction: column;
-    flex: 1;
-
+    margin: 0 auto;
+    padding-top: 2rem;
+    min-width: 450px;
+    border-radius: 1rem;
 }
 
 section {
@@ -28,22 +82,75 @@ section {
     flex-direction: column;
 }
 
+section h2, section h3 {
+    background-color: #0072CE;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    border-top: 5px solid #FFB81C;
+    color: #F4F7FA;
+    margin: 2rem 0 0 0;
+}
+
+section p {
+    padding: 0 2rem 0 2rem;
+}
+
+section ul {
+    list-style: none;
+}
+
+address {
+    padding: 1rem;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
-
+    width: 100%;
+    padding-top: 1rem;
+    justify-content: space-evenly;
 }
+
+.row, address, section ol, section ul {
+    margin-top: -.5rem;
+    border-top: 1rem solid #F4F7FA;
+    border-radius: 1rem;
+ }
 
 .box {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+}
 
+article.box {
+    border-radius: 1rem;
+    border-left: 5px solid gainsboro;
+}
+
+.box h3, li h3 {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    color: gray;
+    margin: 0;
+}
+
+.box h2 {
+    margin-bottom: 1rem;
+}
+
+.box p {
+    margin-bottom: .2rem;
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    background-color: #002244;
+    color: #F4F7FA;
+    padding: 2rem 0;
+    margin-top: 50px;
+    text-align: center;
 }
